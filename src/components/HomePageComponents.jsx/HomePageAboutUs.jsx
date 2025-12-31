@@ -21,8 +21,12 @@ const HomePageAboutUs = () => {
 
         <div className='container mx-auto items-center'>
         {/* top */}
-        <div>
-            <h1 className='text-white font-inter-tight'><span className='bg-[#ffffff] py-1 rounded-full tracking-[1px] px-4 text-black font-semibold font-inter-tight'>About </span></h1>
+        <div className='flex gap-5 items-center'>
+             {/* <button className='bg-gradient-to-t from-[#0b0d10] to-[#0e1316]-600 py-4 px-8 text-white rounded-full border border-[#3d4c56] font-inter-tight tracking-[1px]'>
+                  About Us
+            </button> */}
+            <h1 className='text-white font-inter-tight tracking-[4px] font-semibold'>ABOUT US</h1>
+            <div className='bg-[#ffff] h-[1px] w-[70px]'></div>
         </div>
         <div className='container mx-auto flex items-center mt-12'>
            {/* Left */}
