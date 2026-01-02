@@ -42,8 +42,8 @@ const HomePageAboutUs = () => {
 
            {/* Right */}
            <div className='flex-1 flex flex-col items-start gap-7'>
-              <h1 className='text-white font-inter-tight text-7xl font-bold leading-[80px] tracking-[4px]'>Shape Your <span className='bg-gradient-to-t from-blue-400 to-[#ffff] bg-clip-text
-    text-transparent'>Digital Identity</span> , Let Your <span className='bg-gradient-to-t
+              <h1 className='text-white font-inter-tight text-7xl font-bold leading-[80px] tracking-[4px]'>Shape Your <span className='bg-linear-to-t from-blue-400 to-[#ffff] bg-clip-text
+    text-transparent'>Digital Identity</span> , Let Your <span className='bg-linear-to-t
     from-blue-400
     to-[#ffff]
     bg-clip-text
