@@ -1,84 +1,92 @@
 import React from "react";
 import Image from "next/image";
-import career from "@/components/ServicePageComponents/assets/career.webp";
-import money from "@/components/ServicePageComponents/assets/money.webp";
-import afterhoures from "@/components/ServicePageComponents/assets/afterhoures.webp";
+
 import media from "@/components/ServicePageComponents/assets/media.webp";
 import mentorship from "@/components/ServicePageComponents/assets/mentorship.webp";
-import Learning from "@/components/ServicePageComponents/assets/Learning.webp";
+import learning from "@/components/ServicePageComponents/assets/Learning.webp";
 
 const ServicePageServices = () => {
   const services = [
     {
       image: media,
-      name: "Media",
-      tagline: "Lorem Ipsum Lorem Ipusm Lorem Ipsum",
+      name: "MEDIA",
+      tagline: "Where conversations, ideas, and reflections take form.",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vel facilisis urna ultrices non. Integer ac sem sed sapien tempor consequat. Vivamus id quam nec neque fermentum cursus non ut ligula.",
+        "Our media initiatives create space for thoughtful dialogue around work, money, identity, and life beyond job titles. Through long-form conversations, reflections, and after-hours discussions, we surface real experiences that help individuals make sense of their professional and personal journeys. Media is not about noise — it is about clarity, context, and meaningful perspectives that stay with you.",
+      highlights: ["Career Compass", "Money & Meaning", "After Hours"],
     },
     {
       image: mentorship,
       name: "MENTORSHIP",
-      tagline: "Lorem Ipsum Lorem Ipusm Lorem Ipsum",
+      tagline: "Guided journeys led by experience, not prescriptions.",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vel facilisis urna ultrices non. Integer ac sem sed sapien tempor consequat. Vivamus id quam nec neque fermentum cursus non ut ligula.",
+        "Our mentorship programs support individuals navigating early career uncertainty, role confusion, and real-world transitions. These are structured, guided experiences designed to help participants reflect, decide, and move forward with confidence. Rather than one-size-fits-all advice, mentorship here is contextual, personal, and rooted in lived experience.",
+      highlights: [
+        "Campus Programs",
+        "Guided Programs",
+        "Structured Mentorship Tracks",
+      ],
     },
     {
-      image: Learning,
+      image: learning,
       name: "LEARNING",
-      tagline: "Lorem Ipsum Lorem Ipusm Lorem Ipsum",
+      tagline: "Scalable learning built for depth, not overwhelm.",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vel facilisis urna ultrices non. Integer ac sem sed sapien tempor consequat. Vivamus id quam nec neque fermentum cursus non ut ligula.",
+        "Learning at Adwens focuses on accessible, practical education delivered in formats that grow with the learner. From self-paced courses to immersive workshops and bootcamps, each format is introduced progressively — allowing individuals to learn at their own pace while building real understanding and capability.",
+      highlights: ["Self-Paced Courses", "Workshops", "Bootcamps"],
     },
   ];
 
   return (
-    <div className="bg-black py-10">
-      <div className="container mx-auto flex mt-8 justify-between items-center">
-        <div className="flex justify-between w-[100%] flex-col ">
-          {services.map((service, index) => {
-            return (
-              <React.Fragment key={index}>
-                {/* Right */}
-                <div className="flex">
-                  <div className=" flex gap-10 w-[40%] items-center p-5">
-                    <div className="flex-1">
-                      <Image
-                        src={service.image}
-                        alt="Background shape"
-                        width={600}
-                        height={400}
-                        className="w-[100%] max-w-[350px]"
-                      />
-                    </div>
-                  </div>
+    <div className="bg-black py-20">
+      <div className="container mx-auto flex flex-col gap-24">
+        {services.map((service, index) => (
+          <div key={index} className="flex gap-12 items-center">
+            {/* Left Image */}
+            <div className="w-[40%] flex justify-center">
+              <Image
+                src={service.image}
+                alt={service.name}
+                width={600}
+                height={400}
+                className="w-full max-w-[360px]"
+              />
+            </div>
 
-                  {/* Left */}
-                  <div className="w-[60%] flex flex-col gap-5 justify-center">
-                    <div>
-                      <h1 className="font-inter-tight text-6xl  tracking-[1px] font-bold">
-                        {service.name}
-                      </h1>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-inter-tight italic tracking-[1px]">
-                        {service.tagline}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-lg leading-8">{service.description}</p>
-                    </div>
-                    <div>
-                      <button className="border px-8 py-3">Know More</button>
-                    </div>
-                  </div>
-                </div>
-              </React.Fragment>
-            );
-          })}
-        </div>
-        <div></div>
-        <div></div>
+            {/* Right Content */}
+            <div className="w-[60%] flex flex-col gap-6">
+              <h1 className="font-inter-tight text-6xl font-bold tracking-wide">
+                {service.name}
+              </h1>
+
+              <p className="text-2xl italic font-inter-tight tracking-wide text-gray-300">
+                {service.tagline}
+              </p>
+
+              <p className="text-lg leading-8 text-gray-400">
+                {service.description}
+              </p>
+
+              {/* Highlights */}
+              <ul className="flex flex-wrap gap-3 mt-2">
+                {service.highlights.map((item, i) => (
+                  <li
+                    key={i}
+                    className="border border-gray-600 px-4 py-1 rounded-full text-sm text-gray-300"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6">
+                <button className="border border-white px-8 py-3 text-sm tracking-wide hover:bg-white hover:text-black transition">
+                  Know More
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

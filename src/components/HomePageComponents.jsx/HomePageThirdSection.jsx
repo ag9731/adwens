@@ -36,7 +36,7 @@ const HomePageThirdSection = () => {
           {/* Left Section */}
           <div className="w-1/2  flex gap-6 flex-col items-start">
             <h1 className="text-white font-inter-tight text-7xl font-bold  leading-[80px] tracking-[4px]">
-              Driven by Structure. Built for Results
+              Perspectives shaped by real experience, not theory.
             </h1>
           </div>
 
