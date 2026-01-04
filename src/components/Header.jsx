@@ -5,27 +5,31 @@ import Link from "next/link";
 const Header = () => {
 
     const headerMenu = [
-        {
-            menuName:"Home",
-            menuLink:"/",
-        },
-        {
-            menuName:"About Us",
-            menuLink:"/aboutus",
-        },
-        {
-            menuName:"Services",
-            menuLink:"/services",
-        },
-        {
-            menuName:"",
-            menuLink:"#",
-        },
-        {
-            menuName:"Contact",
-            menuLink:"/contact",
-        }
-    ]
+      {
+        menuName: "Home",
+        menuLink: "/",
+      },
+      {
+        menuName: "About Us",
+        menuLink: "/aboutus",
+      },
+      {
+        menuName: "Content",
+        menuLink: "/content",
+      },
+      {
+        menuName: "Services",
+        menuLink: "/services",
+      },
+      {
+        menuName: "Mentorship",
+        menuLink: "/mentorship",
+      },
+      {
+        menuName: "Contact",
+        menuLink: "/contact",
+      },
+    ];
 
   return (
     <>

@@ -3,26 +3,29 @@ import Image from "next/image";
 import career from "@/components/ServicePageComponents/assets/career.webp";
 import money from "@/components/ServicePageComponents/assets/money.webp";
 import afterhoures from "@/components/ServicePageComponents/assets/afterhoures.webp";
+import media from "@/components/ServicePageComponents/assets/media.webp";
+import mentorship from "@/components/ServicePageComponents/assets/mentorship.webp";
+import Learning from "@/components/ServicePageComponents/assets/Learning.webp";
 
 const ServicePageServices = () => {
   const services = [
     {
-      image: career,
-      name: "Career Compass",
+      image: media,
+      name: "Media",
       tagline: "Lorem Ipsum Lorem Ipusm Lorem Ipsum",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vel facilisis urna ultrices non. Integer ac sem sed sapien tempor consequat. Vivamus id quam nec neque fermentum cursus non ut ligula.",
     },
     {
-      image: money,
-      name: "Money & Meaning",
+      image: mentorship,
+      name: "MENTORSHIP",
       tagline: "Lorem Ipsum Lorem Ipusm Lorem Ipsum",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vel facilisis urna ultrices non. Integer ac sem sed sapien tempor consequat. Vivamus id quam nec neque fermentum cursus non ut ligula.",
     },
     {
-      image: afterhoures,
-      name: "After Hours",
+      image: Learning,
+      name: "LEARNING",
       tagline: "Lorem Ipsum Lorem Ipusm Lorem Ipsum",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus, vel facilisis urna ultrices non. Integer ac sem sed sapien tempor consequat. Vivamus id quam nec neque fermentum cursus non ut ligula.",
