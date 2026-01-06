@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
           ${interTight.variable}
         `}
       >
-        <Header />
+        {/* <Header /> */}
         {children}
         <Footer />
       </body>

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const HomePageBanner = () => {
   return (
-    <div className="relative h-[70vh] bg-black flex items-center overflow-hidden">
+    <div className="relative min-h-screen lg:h-[70vh] bg-black flex items-center overflow-hidden">
       {/* Background Video */}
       <video
-        className="absolute w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         src="/videos/herovideo.mp4"
         autoPlay
         muted
@@ -13,30 +13,72 @@ const HomePageBanner = () => {
         playsInline
       />
 
-      {/* Black Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent" />
 
-      <div className="container mx-auto flex flex-col gap-8 z-10">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-white font-inter-tight text-7xl font-bold w-[60%] leading-[80px] tracking-[4px]">
+      {/* Content inside container */}
+      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col gap-6 lg:gap-8">
+          {/* Heading */}
+          <h1
+            className="
+            text-white font-inter-tight font-bold
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+            leading-tight lg:leading-[80px]
+            tracking-wide
+            text-left
+            max-w-full
+          "
+          >
             Think Better. Plan Wisely. Live Reflectively.
           </h1>
-          <p className="w-[40%] font-roboto text-white text-xl">
+
+          {/* Description */}
+          <p
+            className="
+            font-roboto text-white
+            text-base sm:text-lg md:text-xl
+            opacity-90
+            text-left
+            max-w-full
+          "
+          >
             A space for clarity in career decisions, personal finance, and life
-            beyond job titles not noise.
+            beyond job titles — not noise.
           </p>
-        </div>
-        <div className="flex items-start gap-8">
-          <button className="bg-gradient-to-t from-[#0b0d10] to-[#0e1316]-600 py-4 px-8 text-white rounded-full border border-[#3d4c56] font-inter-tight tracking-[1px]">
-            Explore Services
-          </button>
-          <button className="bg-gradient-to-t from-[#0b0d10] to-[#0e1316]-600 py-4 px-8 text-white rounded-full border border-[#3d4c56] font-inter-tight tracking-[1px]">
-            Get Started
-          </button>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4">
+            <button
+              className="
+              bg-gradient-to-t from-[#0b0d10] to-[#0e1316]
+              py-3 sm:py-4 px-6 sm:px-8
+              text-white rounded-full
+              border border-[#3d4c56]
+              font-inter-tight tracking-wide
+              hover:border-white transition
+            "
+            >
+              Explore Services
+            </button>
+
+            <button
+              className="
+              bg-gradient-to-t from-[#0b0d10] to-[#0e1316]
+              py-3 sm:py-4 px-6 sm:px-8
+              text-white rounded-full
+              border border-[#3d4c56]
+              font-inter-tight tracking-wide
+              hover:border-white transition
+            "
+            >
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default HomePageBanner
+export default HomePageBanner;

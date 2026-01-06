@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import image1 from "@/components/HomePageComponents.jsx/assets/HomeAboutBg.png";
@@ -24,45 +26,50 @@ const HomePageServicesSection2 = () => {
 
   const [selectedService, setSelectedService] = useState(services[0]);
 
-  const handleClick = () => {
-    console.log("All Services ", services);
-    console.log("Selected Service ", selectedService);
-  };
-
-  handleClick();
   return (
-    <div className="flex">
-      <div className="flex-1">
-        <h1>{selectedService.description}</h1>
+    <div
+      className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16
+      items-center"
+    >
+      {/* Left Content */}
+      <div className="flex flex-col gap-6">
+        <h3 className="text-white font-inter-tight text-xl sm:text-2xl max-w-md">
+          {selectedService.description}
+        </h3>
+
         <Image
           src={selectedService.image}
           alt={selectedService.name}
           width={400}
-          height={200}
-          className="w-full max-w-[200px] rounded-lg transition-all duration-300"
+          height={300}
+          className="w-full max-w-xs sm:max-w-sm rounded-xl
+          transition-all duration-300"
         />
       </div>
-      <div className="flex-1 flex flex-col gap-6">
-        {services.map((service, index) => {
-          return (
-            <React.Fragment key={index}>
-              <div
-                key={index}
-                onClick={() => setSelectedService(service)}
-                className="border-b-2"
-              >
-                <div className="cursor-pointer flex items-center justify-between">
-                  <h1 className="text-3xl pb-8 ">{service.name}</h1>
-                  <p>+</p>
-                </div>
 
-                <div>
-                    {/* <p>{service.description}</p> */}
-                </div>
-              </div>
-            </React.Fragment>
-          );
-        })}
+      {/* Right List */}
+      <div className="flex flex-col gap-6">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            onClick={() => setSelectedService(service)}
+            className={`cursor-pointer border-b border-[#3d4c56] pb-6
+              transition ${
+                selectedService.name === service.name
+                  ? "text-white"
+                  : "text-white/60"
+              }`}
+          >
+            <div className="flex items-center justify-between">
+              <h2 className="font-inter-tight text-xl sm:text-2xl tracking-wide">
+                {service.name}
+              </h2>
+              <span className="text-2xl">
+                {selectedService.name === service.name ? "−" : "+"}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

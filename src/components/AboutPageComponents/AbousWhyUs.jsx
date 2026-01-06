@@ -1,33 +1,38 @@
 import React from "react";
 
-const AbousWhyUs = () => {
+const AboutWhyUs = () => {
   return (
-    <div className="bg-black py-10">
-      {/* Top Section */}
-      <div className="container mx-auto flex gap-5 items-center">
-        <h1 className="text-white font-inter-tight tracking-[4px] font-semibold">
+    <section className="bg-black py-12 sm:py-16 lg:py-20">
+      {/* Heading Row */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-4">
+        <h2 className="text-white font-inter-tight font-semibold tracking-[3px] text-sm sm:text-base">
           WHY US
-        </h1>
-        <div className="bg-[#ffff] h-[1px] w-[70px]"></div>
+        </h2>
+        <div className="bg-white h-[1px] w-12 sm:w-16 lg:w-20" />
       </div>
 
-      <div className="container mx-auto flex mt-8 justify-between items-center">
-        {/* Left Section */}
-        <div className="flex gap-6 flex-col items-start">
-          <h1 className="text-white font-inter-tight text-5xl font-bold  leading-[70px] text-center tracking-[1px]">
+      {/* Content */}
+      {/* Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-14 lg:mt-18">
+        <div className="max-w-6xl mx-auto text-center">
+          <p
+            className="
+        text-white font-inter-tight font-bold
+        tracking-[1px]
+        text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl
+        leading-relaxed sm:leading-snug lg:leading-[1.25]
+      "
+          >
             We are a multidisciplinary creative agency specializing in digital
             design, brand development, and user-centered experience strategies.
             Our mission is to transform ideas into meaningful solutions that
             elevate brands and drive measurable impact. With a team of
             designers, strategists, and technologists.
-          </h1>
+          </p>
         </div>
       </div>
-      <div>
-        
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default AbousWhyUs;
+export default AboutWhyUs;

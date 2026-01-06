@@ -1,42 +1,46 @@
 "use client";
 
 import React from "react";
-import { useState } from "react";
 import HomePageServicesSection2 from "./HomePageServicesSection2";
 
 const HomePageOurServicesSection = () => {
   return (
-    <div className="bg-black py-15 ">
-      {/* Top Section */}
-      <div className="container mx-auto flex gap-5 items-center">
-        <h1 className="text-white font-inter-tight tracking-[4px] font-semibold">
-          OUR SERVICES
-        </h1>
-        <div className="bg-[#ffff] h-[1px] w-[70px]"></div>
-      </div>
-
-      {/* Bottom 1st Section */}
-      <div className="container mx-auto flex mt-8 justify-between items-center">
-        {/* Left Section */}
-        <div className="w-1/2  flex gap-6 flex-col items-start">
-          <h1 className="text-white font-inter-tight text-7xl font-bold  leading-[80px] tracking-[4px]">
-            Empowering Brands Through Solutions.
-          </h1>
+    <section className="bg-black py-16 sm:py-20 lg:py-24">
+      {/* Container */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-6">
+        {/* Top Section */}
+        <div className="flex items-center gap-4 mb-10 justify-center lg:justify-start">
+          <h4 className="text-white font-inter-tight tracking-[4px] text-sm sm:text-base">
+            OUR SERVICES
+          </h4>
+          <div className="bg-white h-[1px] w-16" />
         </div>
 
-        {/* Right Section */}
-        <div className="w-1/2 flex justify-end">
-          <h1 className="text-white font-inter-tight tracking-[4px] ">
-            Designed for speed, clarity, and a seamless user journey.
-          </h1>
-        </div>
-      </div>
+        {/* Heading Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
+          {/* Left */}
+          <div>
+            <h1
+              className="text-white font-inter-tight font-bold
+              text-3xl sm:text-4xl md:text-5xl xl:text-6xl
+              leading-tight tracking-[2px] max-w-full lg:max-w-xl text-center lg:text-left mx-auto lg:mx-0"
+            >
+              Empowering Brands Through Solutions.
+            </h1>
+          </div>
 
-      {/* Bottom Section */}
-      <div className="container mx-auto mt-20">
+          {/* Right */}
+          <div className="flex justify-center lg:justify-end mt-4 lg:mt-0">
+            <p className="text-white/80 font-inter-tight tracking-[2px] text-base sm:text-lg md:text-xl max-w-full lg:max-w-md text-center lg:text-left">
+              Designed for speed, clarity, and a seamless user journey.
+            </p>
+          </div>
+        </div>
+
+        {/* Services Component */}
         <HomePageServicesSection2 />
       </div>
-    </div>
+    </section>
   );
 };
 

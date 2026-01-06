@@ -39,31 +39,36 @@ const ServicePageServices = () => {
 
   return (
     <div className="bg-black py-20">
-      <div className="container mx-auto flex flex-col gap-24">
+      <div className="container mx-auto flex flex-col gap-24 px-4 sm:px-6 lg:px-8">
         {services.map((service, index) => (
-          <div key={index} className="flex gap-12 items-center">
+          <div
+            key={index}
+            className={`flex flex-col lg:flex-row items-center gap-12 ${
+              index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+            }`}
+          >
             {/* Left Image */}
-            <div className="w-[40%] flex justify-center">
+            <div className="w-full lg:w-2/5 flex justify-center">
               <Image
                 src={service.image}
                 alt={service.name}
                 width={600}
                 height={400}
-                className="w-full max-w-[360px]"
+                className="w-full max-w-[360px] rounded-lg"
               />
             </div>
 
             {/* Right Content */}
-            <div className="w-[60%] flex flex-col gap-6">
-              <h1 className="font-inter-tight text-6xl font-bold tracking-wide">
+            <div className="w-full lg:w-3/5 flex flex-col gap-6">
+              <h1 className="font-inter-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-white">
                 {service.name}
               </h1>
 
-              <p className="text-2xl italic font-inter-tight tracking-wide text-gray-300">
+              <p className="text-lg sm:text-xl md:text-2xl italic font-inter-tight tracking-wide text-gray-300">
                 {service.tagline}
               </p>
 
-              <p className="text-lg leading-8 text-gray-400">
+              <p className="text-base sm:text-lg md:text-lg lg:text-lg leading-7 sm:leading-8 text-gray-400">
                 {service.description}
               </p>
 
@@ -80,7 +85,7 @@ const ServicePageServices = () => {
               </ul>
 
               <div className="mt-6">
-                <button className="border border-white px-8 py-3 text-sm tracking-wide hover:bg-white hover:text-black transition">
+                <button className="border border-white px-8 py-3 text-sm sm:text-base tracking-wide hover:bg-white hover:text-black transition">
                   Know More
                 </button>
               </div>

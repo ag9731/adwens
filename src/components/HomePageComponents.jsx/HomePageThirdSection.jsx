@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import image from "@/components/HomePageComponents.jsx/assets/line2.svg";
+import lineImage from "@/components/HomePageComponents.jsx/assets/line2.svg";
 
 const HomePageThirdSection = () => {
   const data = [
@@ -22,72 +24,82 @@ const HomePageThirdSection = () => {
   ];
 
   return (
-    <>
-      <div className="bg-black py-15">
-        {/* Top Section */}
-        <div className="container mx-auto flex gap-5 items-center">
-          <h1 className="text-white font-inter-tight tracking-[4px] font-semibold">
+    <section className="bg-black py-16 sm:py-20 lg:py-24">
+      {/* Container */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-6">
+        {/* Section Heading */}
+        <div className="flex items-center gap-4 mb-10 justify-center lg:justify-start">
+          <h4 className="text-white font-inter-tight tracking-[4px] text-sm sm:text-base">
             OUR INSIGHTS
-          </h1>
-          <div className="bg-[#ffff] h-[1px] w-[70px]"></div>
+          </h4>
+          <div className="bg-white h-[1px] w-16" />
         </div>
 
-        <div className="container mx-auto flex mt-8 justify-between items-center">
-          {/* Left Section */}
-          <div className="w-1/2  flex gap-6 flex-col items-start">
-            <h1 className="text-white font-inter-tight text-7xl font-bold  leading-[80px] tracking-[4px]">
+        {/* Top Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
+          {/* Left */}
+          <div>
+            <h2
+              className="text-white font-inter-tight font-bold
+              text-3xl sm:text-4xl md:text-5xl xl:text-6xl
+              leading-tight tracking-[2px] max-w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
+            >
               Perspectives shaped by real experience, not theory.
-            </h1>
+            </h2>
           </div>
 
-          {/* Right Section */}
-          <div className="w-1/2 flex justify-end">
-            <h1 className="text-white font-inter-tight tracking-[4px]">
+          {/* Right */}
+          <div className="flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
+            <p className="text-white/80 font-inter-tight tracking-[2px] text-base sm:text-lg md:text-xl max-w-full lg:max-w-md text-center lg:text-left">
               Designed for speed, clarity, and a seamless user journey.
-            </h1>
+            </p>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="container mx-auto mt-15">
-          <div className=" grid grid-cols-3 gap-10">
-            {data.map((item, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <div
-                    key={index}
-                    className="relative  flex gap-2 flex-col items-center bg-[#090909]  rounded-2xl border border-[#3d4c56] py-20 "
-                  >
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[200px]">
-                      <Image
-                        src={image}
-                        alt="image1"
-                        width={400}
-                        height={200}
-                        className="w-[100%] max-w-[300px] rounded-lg"
-                      />
-                    </div>
-                    <div className="flex flex-col items-center z-9 gap-4">
-                      <div className="flex flex-col items-center">
-                        <h1 className="font-inter-tight text-7xl font-bold leading-[80px] tracking-[4px] bg-linear-to-t from-[#2a2a2a] to-[#ffff] bg-clip-text text-transparent">
-                          {item.number}
-                        </h1>
-                        <h2 className="text-2xl font-bold tracking-[1px]">
-                          {item.name}
-                        </h2>
-                      </div>
-                      <div>
-                        <p>{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </React.Fragment>
-              );
-            })}
-          </div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className="relative bg-[#090909] rounded-2xl border border-[#3d4c56]
+              py-12 sm:py-16 px-6 flex flex-col items-center text-center overflow-hidden
+              hover:border-white transition"
+            >
+              {/* Background Line Image */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <Image
+                  src={lineImage}
+                  alt="decorative line"
+                  width={200}
+                  height={200}
+                  className="opacity-20 w-40 h-40 sm:w-48 sm:h-48"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col gap-4">
+                <h1
+                  className="font-inter-tight font-bold
+                  text-4xl sm:text-5xl md:text-6xl xl:text-7xl
+                  tracking-[3px] bg-gradient-to-t from-[#2a2a2a] to-white
+                  bg-clip-text text-transparent"
+                >
+                  {item.number}
+                </h1>
+
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-white">
+                  {item.name}
+                </h2>
+
+                <p className="text-sm sm:text-base md:text-lg text-white/70 max-w-xs mx-auto">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
