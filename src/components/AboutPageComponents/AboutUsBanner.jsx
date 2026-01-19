@@ -15,7 +15,7 @@ const AboutUsBanner = () => {
               text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
               leading-tight lg:leading-[1.1]"
             >
-              About Us Driven by Design
+              About Adwens Digital
             </h1>
           </div>
 

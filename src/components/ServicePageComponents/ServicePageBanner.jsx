@@ -7,7 +7,7 @@ const ServicePageBanner = () => {
         {/* Left Section */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4 items-start">
           <h1 className="text-white font-inter-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-snug sm:leading-snug md:leading-[70px] lg:leading-[80px] tracking-[1px] sm:tracking-[2px] md:tracking-[3px] lg:tracking-[4px]">
-            Service Driven by Design
+            Initiatives That Inspire Action
           </h1>
         </div>
 

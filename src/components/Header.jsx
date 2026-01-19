@@ -10,9 +10,9 @@ const Header = () => {
   const headerMenu = [
     { menuName: "Home", menuLink: "/" },
     { menuName: "About Us", menuLink: "/aboutus" },
-    { menuName: "Content", menuLink: "/content" },
-    { menuName: "Services", menuLink: "/services" },
-    { menuName: "Mentorship", menuLink: "/mentorship" },
+    // { menuName: "Content", menuLink: "/content" },
+    { menuName: "Initiatives", menuLink: "/services" },
+    // { menuName: "Mentorship", menuLink: "/mentorship" },
     { menuName: "Contact", menuLink: "/contact" },
   ];
 

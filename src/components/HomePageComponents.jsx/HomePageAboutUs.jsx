@@ -58,7 +58,7 @@ const HomePageAboutUs = () => {
 
             <p className="font-roboto text-white/90 text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
               ADWENS exists to support individuals at critical transition points
-              — early careers, financial independence, and personal growth. We
+              early careers, financial independence, and personal growth. We
               combine thoughtful conversations, guided mentorship, and
               structured learning to help people make informed decisions without
               pressure or confusion.

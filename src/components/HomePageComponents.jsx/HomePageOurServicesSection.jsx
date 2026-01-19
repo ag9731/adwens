@@ -10,8 +10,8 @@ const HomePageOurServicesSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-6">
         {/* Top Section */}
         <div className="flex items-center gap-4 mb-10 justify-center lg:justify-start">
-          <h4 className="text-white font-inter-tight tracking-[4px] text-sm sm:text-base">
-            OUR SERVICES
+          <h4 className="text-white uppercase font-inter-tight tracking-[4px] text-sm sm:text-base">
+            Our Initiatives
           </h4>
           <div className="bg-white h-[1px] w-16" />
         </div>
@@ -25,7 +25,7 @@ const HomePageOurServicesSection = () => {
               text-3xl sm:text-4xl md:text-5xl xl:text-6xl
               leading-tight tracking-[2px] max-w-full lg:max-w-xl text-center lg:text-left mx-auto lg:mx-0"
             >
-              Empowering Brands Through Solutions.
+              Crafting authentic content in an AI-driven world
             </h1>
           </div>
 

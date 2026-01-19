@@ -23,11 +23,9 @@ const AboutWhyUs = () => {
         leading-relaxed sm:leading-snug lg:leading-[1.25]
       "
           >
-            We are a multidisciplinary creative agency specializing in digital
-            design, brand development, and user-centered experience strategies.
-            Our mission is to transform ideas into meaningful solutions that
-            elevate brands and drive measurable impact. With a team of
-            designers, strategists, and technologists.
+            We craft stories, visuals, and digital experiences that spark
+            engagement, inspire action, and leave a lasting impact. Creativity,
+            clarity, and experience drive everything we create.
           </p>
         </div>
       </div>

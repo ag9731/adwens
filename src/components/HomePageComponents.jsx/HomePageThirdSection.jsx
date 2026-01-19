@@ -51,7 +51,7 @@ const HomePageThirdSection = () => {
           {/* Right */}
           <div className="flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
             <p className="text-white/80 font-inter-tight tracking-[2px] text-base sm:text-lg md:text-xl max-w-full lg:max-w-md text-center lg:text-left">
-              Designed for speed, clarity, and a seamless user journey.
+              Built for clarity and creativity, driven by experience.
             </p>
           </div>
         </div>

@@ -13,8 +13,8 @@ const page = () => {
       <AboutUsBanner/>
       <AbousWhyUs/>
       <HomePageThirdSection/>
-      <AboutUsMissionVision/>
-      <AboutUsHowWeAreDifferent/>
+      {/* <AboutUsMissionVision/> */}
+      {/* <AboutUsHowWeAreDifferent/> */}
       <HomePageContactUsSection/>
     </div>
   )

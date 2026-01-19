@@ -30,7 +30,7 @@ const HomePageBanner = () => {
             max-w-full
           "
           >
-            Think Better. Plan Wisely. Live Reflectively.
+            We create things worth your time.
           </h1>
 
           {/* Description */}
@@ -43,8 +43,8 @@ const HomePageBanner = () => {
             max-w-full
           "
           >
-            A space for clarity in career decisions, personal finance, and life
-            beyond job titles — not noise.
+            Thoughtful stories, conversations, and ideas. Built for people who
+            think.
           </p>
 
           {/* Buttons */}
@@ -59,7 +59,7 @@ const HomePageBanner = () => {
               hover:border-white transition
             "
             >
-              Explore Services
+              Explore What We Do
             </button>
 
             <button
