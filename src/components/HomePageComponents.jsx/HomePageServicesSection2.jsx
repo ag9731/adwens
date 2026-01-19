@@ -2,25 +2,26 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import image1 from "@/components/HomePageComponents.jsx/assets/HomeAboutBg.png";
-import image2 from "@/components/HomePageComponents.jsx/assets/HomeAboutUsSection.webp";
+import media from "@/components/HomePageComponents.jsx/assets/mediainitiatves.webp";
+import learning from "@/components/HomePageComponents.jsx/assets/Learning.webp";
+import mentorship from "@/components/HomePageComponents.jsx/assets/mentorship.webp";
 
 const HomePageServicesSection2 = () => {
   const services = [
     {
       name: "Media",
       description: "Where conversations and ideas are created.",
-      image: image1,
+      image: media,
     },
     {
       name: "Mentorship",
       description: "Guided journeys led by experience.",
-      image: image2,
+      image: mentorship,
     },
     {
       name: "Learning",
-      description: "Structured learning for long-term mastery.",
-      image: image1,
+      description: "Comming Soon",
+      image: learning,
     },
   ];
 
@@ -33,7 +34,7 @@ const HomePageServicesSection2 = () => {
     >
       {/* Left Content */}
       <div className="flex flex-col gap-6">
-        <h3 className="text-white font-inter-tight text-xl sm:text-2xl max-w-md">
+        <h3 className="text-white font-inter-tight text-xl sm:text-2xl ">
           {selectedService.description}
         </h3>
 

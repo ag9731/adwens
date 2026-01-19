@@ -7,14 +7,14 @@ const ServicePageBanner = () => {
         {/* Left Section */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4 items-start">
           <h1 className="text-white font-inter-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-snug sm:leading-snug md:leading-[70px] lg:leading-[80px] tracking-[1px] sm:tracking-[2px] md:tracking-[3px] lg:tracking-[4px]">
-            Initiatives That Inspire Action
+            Initiatives with Meaning
           </h1>
         </div>
 
         {/* Right Section */}
         <div className="w-full lg:w-1/2 flex justify-start lg:justify-end mt-6 lg:mt-0">
           <h1 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-inter-tight leading-relaxed">
-            A design agency passionate about breathing life into brands.
+            Meaningful ideas, guided growth, real impact.
           </h1>
         </div>
       </div>

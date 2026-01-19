@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -20,9 +21,17 @@ const Header = () => {
     <header className="bg-black py-6 shadow-2xl">
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-white font-inter-tight text-xl tracking-wide">
-          LOGO
-        </h1>
+        <div>
+          <Link href="/">
+            <Image
+              src="/assets/adwens-logo.png"
+              alt="Logo"
+              width={150}
+              height={55}
+              className="w-[90px]  sm:w-[130px] h-auto"
+            />
+          </Link>
+        </div>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex bg-[#0c202c]/30 px-16 py-4 rounded-full border border-[#3d4c56] shadow-lg">

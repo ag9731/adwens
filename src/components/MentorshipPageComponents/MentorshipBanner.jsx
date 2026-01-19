@@ -7,14 +7,14 @@ const MentorshipBanner = () => {
     <div className="bg-black py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
         {/* Title Section - left aligned */}
-        <div className="w-full flex flex-col sm:flex-row sm:items-start items-center gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row sm:items-start items-center gap-6">
           <h1 className="text-white font-inter-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-snug sm:leading-snug md:leading-[70px] lg:leading-[80px] text-left sm:text-left tracking-[1px] sm:tracking-[2px] md:tracking-[3px] lg:tracking-[4px]">
             MENTORSHIP PROGRAMS
           </h1>
-        </div>
+        </div> */}
 
         {/* Banner Image */}
-        <div className="w-full">
+        {/* <div className="w-full">
           <Image
             src={banner}
             alt="Mentorship Banner"
@@ -22,7 +22,7 @@ const MentorshipBanner = () => {
             height={600}
             className="w-full rounded-lg object-cover"
           />
-        </div>
+        </div> */}
 
         {/* Description Section */}
         <div className="w-full flex flex-col gap-6">

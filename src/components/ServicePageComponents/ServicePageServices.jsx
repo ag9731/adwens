@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
-
 import media from "@/components/ServicePageComponents/assets/media.webp";
 import mentorship from "@/components/ServicePageComponents/assets/mentorship.webp";
 import learning from "@/components/ServicePageComponents/assets/Learning.webp";
+import HomePageMediaInitiativesSection from "@/components/HomePageComponents.jsx/HomePageMediaInitiativesSection";
+import MentorshipBanner from "@/components/MentorshipPageComponents/MentorshipBanner";
+import ServicePageLearning from "@/components/ServicePageComponents/ServicePageLearning";
 
 const ServicePageServices = () => {
   const services = [
@@ -14,6 +16,7 @@ const ServicePageServices = () => {
       description:
         "Our media initiatives create space for thoughtful dialogue around work, money, identity, and life beyond job titles. Through long-form conversations, reflections, and after-hours discussions, we surface real experiences that help individuals make sense of their professional and personal journeys. Media is not about noise — it is about clarity, context, and meaningful perspectives that stay with you.",
       highlights: ["Career Compass", "Money & Meaning", "After Hours"],
+      Component: HomePageMediaInitiativesSection,
     },
     {
       image: mentorship,
@@ -26,71 +29,78 @@ const ServicePageServices = () => {
         "Guided Programs",
         "Structured Mentorship Tracks",
       ],
+      Component: MentorshipBanner,
     },
     {
       image: learning,
       name: "LEARNING",
-      tagline: "Scalable learning built for depth, not overwhelm.",
+      tagline: "Comming Soon",
       description:
-        "Learning at Adwens focuses on accessible, practical education delivered in formats that grow with the learner. From self-paced courses to immersive workshops and bootcamps, each format is introduced progressively — allowing individuals to learn at their own pace while building real understanding and capability.",
-      highlights: ["Self-Paced Courses", "Workshops", "Bootcamps"],
+        "...",
+      highlights: [],
+      Component: ServicePageLearning,
     },
   ];
 
+
   return (
-    <div className="bg-black py-20">
+    <div className="bg-black py-8">
       <div className="container mx-auto flex flex-col gap-24 px-4 sm:px-6 lg:px-8">
         {services.map((service, index) => (
-          <div
-            key={index}
-            className={`flex flex-col lg:flex-row items-center gap-12 ${
-              index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-            }`}
-          >
-            {/* Left Image */}
-            <div className="w-full lg:w-2/5 flex justify-center">
-              <Image
-                src={service.image}
-                alt={service.name}
-                width={600}
-                height={400}
-                className="w-full max-w-[360px] rounded-lg"
-              />
-            </div>
+          <React.Fragment key={index}>
+            <div
+              key={index}
+              className={`flex flex-col lg:flex-row items-center gap-12 ${
+                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Left Image */}
+              <div className="w-full lg:w-2/5 flex justify-center">
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  width={600}
+                  height={400}
+                  className="w-full max-w-[360px] rounded-lg"
+                />
+              </div>
 
-            {/* Right Content */}
-            <div className="w-full lg:w-3/5 flex flex-col gap-6">
-              <h1 className="font-inter-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-white">
-                {service.name}
-              </h1>
+              {/* Right Content */}
+              <div className="w-full lg:w-3/5 flex flex-col gap-6">
+                <h1 className="font-inter-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-white">
+                  {service.name}
+                </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl italic font-inter-tight tracking-wide text-gray-300">
-                {service.tagline}
-              </p>
+                <p className="text-lg sm:text-xl md:text-2xl italic font-inter-tight tracking-wide text-gray-300">
+                  {service.tagline}
+                </p>
 
-              <p className="text-base sm:text-lg md:text-lg lg:text-lg leading-7 sm:leading-8 text-gray-400">
-                {service.description}
-              </p>
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg leading-7 sm:leading-8 text-gray-400">
+                  {service.description}
+                </p>
 
-              {/* Highlights */}
-              <ul className="flex flex-wrap gap-3 mt-2">
-                {service.highlights.map((item, i) => (
-                  <li
-                    key={i}
-                    className="border border-gray-600 px-4 py-1 rounded-full text-sm text-gray-300"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                {/* Highlights */}
+                <ul className="flex flex-wrap gap-3 mt-2">
+                  {service.highlights.map((item, i) => (
+                    <li
+                      key={i}
+                      className="border border-gray-600 px-4 py-1 rounded-full text-sm text-gray-300"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
 
-              <div className="mt-6">
-                <button className="border border-white px-8 py-3 text-sm sm:text-base tracking-wide hover:bg-white hover:text-black transition">
-                  Know More
-                </button>
+                {/* Knoe More Buttons */}
+                {/* <div className="mt-6">
+                  <button className="border border-white px-8 py-3 text-sm sm:text-base tracking-wide hover:bg-white hover:text-black transition">
+                    Know More
+                  </button>
+                </div> */}
               </div>
             </div>
-          </div>
+            <div>{<service.Component />}</div>
+          </React.Fragment>
         ))}
       </div>
     </div>
