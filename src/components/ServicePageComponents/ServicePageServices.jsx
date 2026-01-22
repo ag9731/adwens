@@ -3,7 +3,7 @@ import Image from "next/image";
 import media from "@/components/ServicePageComponents/assets/media.webp";
 import mentorship from "@/components/ServicePageComponents/assets/mentorship.webp";
 import learning from "@/components/ServicePageComponents/assets/Learning.webp";
-import HomePageMediaInitiativesSection from "@/components/HomePageComponents.jsx/HomePageMediaInitiativesSection";
+import HomePageMediaInitiativesSection from "@/components/HomePageComponents/HomePageMediaInitiativesSection";
 import MentorshipBanner from "@/components/MentorshipPageComponents/MentorshipBanner";
 import ServicePageLearning from "@/components/ServicePageComponents/ServicePageLearning";
 
@@ -35,13 +35,11 @@ const ServicePageServices = () => {
       image: learning,
       name: "LEARNING",
       tagline: "Comming Soon",
-      description:
-        "...",
+      description: "...",
       highlights: [],
       Component: ServicePageLearning,
     },
   ];
-
 
   return (
     <div className="bg-black py-8">

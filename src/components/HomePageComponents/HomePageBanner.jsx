@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const HomePageBanner = () => {
   return (
@@ -49,31 +50,33 @@ const HomePageBanner = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4">
-            <button
-              className="
-              bg-gradient-to-t from-[#0b0d10] to-[#0e1316]
+            <Link href="/services">
+              <button
+                className="
+              bg-gradient-to-t cursor-pointer from-[#0b0d10] to-[#0e1316]
               py-3 sm:py-4 px-6 sm:px-8
               text-white rounded-full
               border border-[#3d4c56]
               font-inter-tight tracking-wide
-              hover:border-white transition
-            "
-            >
-              Explore What We Do
-            </button>
+              hover:border-white transition"
+              >
+                Explore What We Do
+              </button>
+            </Link>
 
-            <button
-              className="
-              bg-gradient-to-t from-[#0b0d10] to-[#0e1316]
+            <Link href="/contact">
+              <button
+                className="
+              bg-gradient-to-t cursor-pointer from-[#0b0d10] to-[#0e1316]
               py-3 sm:py-4 px-6 sm:px-8
               text-white rounded-full
               border border-[#3d4c56]
               font-inter-tight tracking-wide
-              hover:border-white transition
-            "
-            >
-              Get Started
-            </button>
+              hover:border-white transition"
+              >
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

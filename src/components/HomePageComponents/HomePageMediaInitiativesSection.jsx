@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import career from "@/components/HomePageComponents.jsx/assets/career.png";
-import afterhoures from "@/components/HomePageComponents.jsx/assets/afterhoures.png";
-import money from "@/components/HomePageComponents.jsx/assets/money.png";
+import career from "@/components/HomePageComponents/assets/career.png";
+import afterhoures from "@/components/HomePageComponents/assets/afterhoures.png";
+import money from "@/components/HomePageComponents/assets/money.png";
 
 const HomePageMediaInitiativesSection = () => {
   const services = [

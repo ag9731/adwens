@@ -24,7 +24,7 @@ const Header = () => {
         <div>
           <Link href="/">
             <Image
-              src="/assets/adwens-logo.png"
+              src="/assets/adwens-logo-bg-white.png"
               alt="Logo"
               width={150}
               height={55}
@@ -51,9 +51,11 @@ const Header = () => {
 
         {/* Desktop Button */}
         <div className="hidden lg:block">
-          <button className="bg-gradient-to-t from-[#0b0d10] to-[#0e1316] px-8 py-3 rounded-full border border-[#3d4c56] text-white font-inter-tight tracking-wide hover:border-white transition">
-            Get Started
-          </button>
+          <Link href="/contact">
+            <button className="bg-gradient-to-t cursor-pointer from-[#0b0d10] to-[#0e1316] px-8 py-3 rounded-full border border-[#3d4c56] text-white font-inter-tight tracking-wide hover:border-white transition">
+              Get Started
+            </button>
+          </Link>
         </div>
 
         {/* Mobile / Tablet Menu Icon */}
@@ -83,9 +85,11 @@ const Header = () => {
 
               {/* Mobile Button */}
               <li className="pt-4">
-                <button className="bg-gradient-to-t from-[#0b0d10] to-[#0e1316] px-8 py-3 rounded-full border border-[#3d4c56] text-white font-inter-tight tracking-wide">
-                  Get Started
-                </button>
+                <Link href="/contact">
+                  <button className="bg-gradient-to-t cursor-pointer from-[#0b0d10] to-[#0e1316] px-8 py-3 rounded-full border border-[#3d4c56] text-white font-inter-tight tracking-wide">
+                    Get Started
+                  </button>
+                </Link>
               </li>
             </ul>
           </div>

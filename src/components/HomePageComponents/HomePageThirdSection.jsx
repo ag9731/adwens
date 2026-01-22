@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import lineImage from "@/components/HomePageComponents.jsx/assets/line2.svg";
+import lineImage from "@/components/HomePageComponents/assets/line2.svg";
 
 const HomePageThirdSection = () => {
   const data = [
@@ -25,9 +25,7 @@ const HomePageThirdSection = () => {
 
   return (
     <section className="bg-black py-16 sm:py-20 lg:py-24">
-      {/* Container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-6">
-        {/* Section Heading */}
         <div className="flex items-center gap-4 mb-10 justify-center lg:justify-start">
           <h4 className="text-white font-inter-tight tracking-[4px] text-sm sm:text-base">
             OUR INSIGHTS
@@ -35,20 +33,13 @@ const HomePageThirdSection = () => {
           <div className="bg-white h-[1px] w-16" />
         </div>
 
-        {/* Top Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
-          {/* Left */}
           <div>
-            <h2
-              className="text-white font-inter-tight font-bold
-              text-3xl sm:text-4xl md:text-5xl xl:text-6xl
-              leading-tight tracking-[2px] max-w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
-            >
+            <h2 className="text-white font-inter-tight font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight tracking-[2px] max-w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
               Perspectives shaped by real experience, not theory.
             </h2>
           </div>
 
-          {/* Right */}
           <div className="flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
             <p className="text-white/80 font-inter-tight tracking-[2px] text-base sm:text-lg md:text-xl max-w-full lg:max-w-md text-center lg:text-left">
               Built for clarity and creativity, driven by experience.
@@ -56,16 +47,12 @@ const HomePageThirdSection = () => {
           </div>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {data.map((item, index) => (
             <div
               key={index}
-              className="relative bg-[#090909] rounded-2xl border border-[#3d4c56]
-              py-12 sm:py-16 px-6 flex flex-col items-center text-center overflow-hidden
-              hover:border-white transition"
+              className="relative bg-[#090909] rounded-2xl border border-[#3d4c56] py-12 sm:py-16 px-6 flex flex-col items-center text-center overflow-hidden hover:border-white transition"
             >
-              {/* Background Line Image */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <Image
                   src={lineImage}
@@ -76,14 +63,8 @@ const HomePageThirdSection = () => {
                 />
               </div>
 
-              {/* Content */}
               <div className="relative z-10 flex flex-col gap-4">
-                <h1
-                  className="font-inter-tight font-bold
-                  text-4xl sm:text-5xl md:text-6xl xl:text-7xl
-                  tracking-[3px] bg-gradient-to-t from-[#2a2a2a] to-white
-                  bg-clip-text text-transparent"
-                >
+                <h1 className="font-inter-tight font-bold text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-[3px] bg-gradient-to-t from-[#2a2a2a] to-white bg-clip-text text-transparent">
                   {item.number}
                 </h1>
 

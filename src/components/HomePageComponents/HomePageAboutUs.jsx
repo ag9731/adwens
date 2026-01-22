@@ -2,8 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import image from "@/components/HomePageComponents.jsx/assets/HomeAboutUsSection.webp";
-import bgImg from "@/components/HomePageComponents.jsx/assets/HomeAboutBg.png";
+import Link from "next/link";
+import image1 from "@/components/HomePageComponents/assets/HomeAboutBg.png";
+import image2 from "@/components/HomePageComponents/assets/HomeAboutUsSection.webp";
 
 const HomePageAboutUs = () => {
   return (
@@ -11,7 +12,7 @@ const HomePageAboutUs = () => {
       {/* Center Background Shape */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <Image
-          src={bgImg}
+          src={image2}
           alt="Background shape"
           width={600}
           height={400}
@@ -34,7 +35,7 @@ const HomePageAboutUs = () => {
           {/* Left Image */}
           <div className="flex justify-center lg:justify-start">
             <Image
-              src={image}
+              src={image1}
               alt="About us"
               width={400}
               height={300}
@@ -44,12 +45,7 @@ const HomePageAboutUs = () => {
 
           {/* Right Content */}
           <div className="flex flex-col gap-6 text-center lg:text-left">
-            <h2
-              className="
-              text-white font-inter-tight font-bold
-              text-3xl sm:text-4xl md:text-5xl xl:text-6xl
-              leading-tight tracking-[2px]"
-            >
+            <h2 className="text-white font-inter-tight font-bold text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight tracking-[2px]">
               Clarity for Careers,
               <span className="block bg-gradient-to-t from-blue-400 to-white bg-clip-text text-transparent">
                 Money & Life
@@ -65,17 +61,11 @@ const HomePageAboutUs = () => {
             </p>
 
             <div className="pt-4 flex justify-center lg:justify-start">
-              <button
-                className="
-                inline-flex items-center justify-center
-                bg-gradient-to-t from-[#0b0d10] to-[#0e1316]
-                text-white px-8 py-3 rounded-full border border-[#3d4c56]
-                font-inter-tight tracking-[1px]
-                hover:border-white transition
-              "
-              >
-                Know More
-              </button>
+              <Link href="/aboutus">
+                <button className="inline-flex cursor-pointer items-center justify-center bg-gradient-to-t from-[#0b0d10] to-[#0e1316] text-white px-8 py-3 rounded-full border border-[#3d4c56] font-inter-tight tracking-[1px]  hover:border-white transition">
+                  Know More
+                </button>
+              </Link>
             </div>
           </div>
         </div>

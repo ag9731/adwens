@@ -56,14 +56,13 @@ const ContactUsSecondSection = () => {
               <p className="text-xs uppercase tracking-wider text-gray-500">
                 Office
               </p>
-              <p className="mt-2 text-lg">LA, Dubin Street</p>
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-wider text-gray-500">
-                Office
+              <p className="mt-2 text-lg">
+                No. 52, SPD Plaza, Jyothi Nivas College Road, Koramangala,
+                Bangalore South, Near Jyoti Nivas College, Bengaluru – 560034,
+                Karnataka, India
               </p>
-              <p className="mt-2 text-lg">NY, Santo Street</p>
             </div>
+          
             <div>
               <p className="text-xs uppercase tracking-wider text-gray-500">
                 Email
@@ -72,7 +71,7 @@ const ContactUsSecondSection = () => {
                 href="mailto:hello@designhive.com"
                 className="mt-2 inline-block text-lg text-blue-400 hover:text-blue-300 transition"
               >
-                hello@akash.com
+                hello@adwens.com
               </a>
             </div>
           </div>
