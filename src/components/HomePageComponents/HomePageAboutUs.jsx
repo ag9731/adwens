@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import image1 from "@/components/HomePageComponents/assets/HomeAboutBg.png";
-import image2 from "@/components/HomePageComponents/assets/HomeAboutUsSection.webp";
+import homeaboutusbg from "@/components/HomePageComponents/assets/HomeAboutBg.png";
+import homeaboutussection from "@/components/HomePageComponents/assets/HomeAboutUsSection.webp";
 
 const HomePageAboutUs = () => {
   return (
@@ -12,7 +12,7 @@ const HomePageAboutUs = () => {
       {/* Center Background Shape */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <Image
-          src={image2}
+          src={homeaboutusbg}
           alt="Background shape"
           width={600}
           height={400}
@@ -35,7 +35,7 @@ const HomePageAboutUs = () => {
           {/* Left Image */}
           <div className="flex justify-center lg:justify-start">
             <Image
-              src={image1}
+              src={homeaboutussection}
               alt="About us"
               width={400}
               height={300}
